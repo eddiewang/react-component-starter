@@ -8,6 +8,10 @@ var appName = 'app';
 var host = '0.0.0.0';
 var port = '9000';
 
+var babelQuery = {
+  presets: ['es2015', 'stage-0', 'react'],
+  plugins: ['transform-async-to-generator', 'transform-decorators-legacy']
+}
 var plugins = [], outputFile;
 
 if (env === 'build') {
@@ -18,7 +22,7 @@ if (env === 'build') {
 }
 
 var config = {
-  entry: './src/index.js',
+  entry: './example`/app.js',
   devtool: 'source-map',
   output: {
     path: __dirname + '/lib',
@@ -30,29 +34,26 @@ var config = {
       {
         test: /(\.jsx|\.js)$/,
         loader: 'babel-loader',
-        exclude: /(node_modules|bower_components)/,
-        query: {
-          presets: ['es2015', 'stage-0', 'react'],
-          plugins: ['transform-async-to-generator', 'transform-decorators-legacy']
-        }
-      },
-      {
-        test: /(\.jsx|\.js)$/,
-        loader: "eslint-loader",
-        exclude: /node_modules/
+        exclude: /(node_modules)/,
+        options: babelQuery
       }
     ]
   },
   resolve: {
-    root: path.resolve('./src'),
-    extensions: ['', '.js', '.jsx']
+    modules: ['src', 'node_modules', 'example'],
+    extensions: ['.js', '.jsx'],
+    mainFields: [
+      'browser',
+      'jsnext:main',
+      'module',
+      'main'
+    ]
   },
   plugins: plugins
 };
 
 if (env === 'dev') {
   new WebpackDevServer(webpack(config), {
-    contentBase: './example',
     hot: true,
     debug: true
   }).listen(port, host, function (err, result) {

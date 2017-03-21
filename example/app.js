@@ -1,5 +1,5 @@
-var React = require('react'),
-	MyComponent = require('my-component');
+var React = require('react')
+import MyComponent from 'index'
 
 var App = React.createClass({
 	render: function() {
