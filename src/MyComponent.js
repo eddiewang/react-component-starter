@@ -1,13 +1,18 @@
-var React = require('react');
+import React from 'react'
+import styled from 'styled-components'
 
-var MyComponent = React.createClass({
-	
-	render: function() {
-		return (<div>
-			<h1>Hi my name is Eddie Wang</h1>
-		</div>);
+const Title = styled.h1`
+	color: red;
+`
+
+class MyComponent extends React.Component {
+	render () {
+		return (
+			<Title>
+				<h1>Eddie Wang</h1>
+			</Title>
+		)
 	}
-	
-});
+}
 
-module.exports = MyComponent;
+export default MyComponent

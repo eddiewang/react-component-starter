@@ -15,7 +15,7 @@
     "url": "https://github.com/eddiewang/react-component-starter/issues"
   },
   "scripts": {
-    "start": "webpack-dev-server --env development",
+    "start": "webpack-dev-server",
     "dist": "webpack --env dist",
     "lint:js": "standard"
   },
@@ -26,7 +26,8 @@
   ],
   "dependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "styled-components": "^1.4.4"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",

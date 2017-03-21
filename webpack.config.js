@@ -57,19 +57,4 @@ var config = {
   plugins: plugins
 };
 
-// if (env === 'development') {
-//   new WebpackDevServer(webpack(config), {
-//     contentBase: './example',
-//     hot: true,
-//     debug: true
-//   }).listen(port, host, function (err, result) {
-//     if (err) {
-//       console.log(err);
-//     }
-//   });
-//   console.log('-------------------------');
-//   console.log('Local web server runs at http://' + host + ':' + port);
-//   console.log('-------------------------');
-// }
-
 module.exports = config;
