@@ -1,5 +1,6 @@
-var React = require('react')
-import MyComponent from 'index'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import MyComponent from 'MyComponent'
 
 var App = React.createClass({
 	render: function() {
@@ -9,6 +10,6 @@ var App = React.createClass({
 			</div>
 		)
 	}
-});
+})
 
-React.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
