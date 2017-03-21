@@ -1,0 +1,34 @@
+{
+  "name": "my-component",
+  "version": "0.0.1",
+  "private": true,
+  "description": "My React Component",
+  "main": "src/index.js",
+  "author": "Eddie Wang",
+  "license": "MIT",
+  "homepage": "https://github.com/eddiewang/react-component-starter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eddiewang/react-component-starter"
+  },
+  "bugs": {
+    "url": "https://github.com/eddiewang/react-component-starter/issues"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --env development",
+    "lint:js": "standard",
+    "dist": "webpack --env dist"
+  },
+  "module": "dist/",
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  }
+}
