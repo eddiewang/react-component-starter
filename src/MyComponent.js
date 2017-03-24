@@ -1,18 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Title = styled.h1`
-	color: red;
+const Wrapper = styled.div`
+	height: 100%;
+	h1 {
+		color: brown;
+	}
 `
 
 class MyComponent extends React.Component {
 	render () {
 		return (
-			<Title>
+			<Wrapper>
 				<h1>Eddie Wang</h1>
-			</Title>
+				<p>What up</p>
+			</Wrapper>
 		)
 	}
 }
 
-export default MyComponent
+const StyledMyComponent = styled(MyComponent)`
+	h1 {
+		color: red !important;
+	}
+`
+
+export default StyledMyComponent
